@@ -1,8 +1,10 @@
-const authorModel = require("../models/authorModel")
-const bookModel= require("../models/bookModel")
+const authorModel = require("../models/authorModel");
+const bookModel= require("../models/bookModel");
+publisherModel=require("../models/publisherModel");
 
 const createBook= async function (req, res) {
     let book = req.body
+    console.log(data);
     let bookCreated = await bookModel.create(book)
     res.send({data: bookCreated})
 }
