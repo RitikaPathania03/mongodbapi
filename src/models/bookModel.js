@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const ObjectId= mongoose.Schema.types.ObjectId;
+const ObjectId= mongoose.Schema.types.ObjectId
 
 
 const bookSchema= new mongoose.schema(
@@ -8,9 +8,9 @@ const bookSchema= new mongoose.schema(
             type:String,
             require:true,
         },
-        author:{
-            type:objectId,
-            ref: "newAuthor",
+        author_id:{
+            type:ObjectId,
+            ref: "Author",
 
         },
 
@@ -32,4 +32,4 @@ const bookSchema= new mongoose.schema(
     {timestamps:true}
 
 );
-module.export=mongoose.model("newBook", bookSchema);
+module.export=mongoose.model("MyBooks", bookSchema);
